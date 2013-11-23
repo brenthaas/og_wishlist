@@ -56,6 +56,8 @@ GEM
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
       posix-spawn (~> 0.3.6)
+    haml (4.0.4)
+      tilt
     hike (1.2.3)
     hirb (0.7.1)
     i18n (0.6.5)
@@ -180,6 +182,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  haml
   jazz_hands
   jbuilder (~> 1.2)
   jquery-rails

@@ -1,0 +1,9 @@
+<h2>Add a wish</h2>
+
+<%= form_for @wish do |wish| %>
+  <p><%= wish.label :title %><%= wish.text_field :title %></p>
+  <p><%= wish.label :summary %><%= wish.text_area :summary %></p>
+  <p><%= wish.label :url %><%= wish.text_field :url %></p>
+  <p><%= wish.label :image %><%= wish.text_field :image %></p>
+  <p><%= wish.submit "Add wish" %></p>
+<% end %>
