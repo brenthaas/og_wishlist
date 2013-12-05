@@ -20,7 +20,7 @@ class WishesController < ApplicationController
 
   def index
     @wishes = Wish.all
-    render nothing: true
+    render :index
   end
 
 
