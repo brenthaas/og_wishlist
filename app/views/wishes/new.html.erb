@@ -5,5 +5,6 @@
   <p><%= wish.label :summary %><%= wish.text_area :summary %></p>
   <p><%= wish.label :url %><%= wish.text_field :url %></p>
   <p><%= wish.label :image %><%= wish.text_field :image %></p>
+  <p><%= hidden_field :user, :id, {value: current_user.id} %>
   <p><%= wish.submit "Add wish" %></p>
 <% end %>
