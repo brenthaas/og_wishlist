@@ -1,4 +1,5 @@
 class WishesController < ApplicationController
+  before_action :authenticate_user!
 
   def create
     wish = Wish.new(validated_params)
