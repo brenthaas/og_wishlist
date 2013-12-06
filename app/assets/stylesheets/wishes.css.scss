@@ -1,3 +1,26 @@
 // Place all the styles related to the wishes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#new-wish {
+  text-align: center;
+  fieldset {
+    border: 1px solid silver;
+    display: inline-block;
+    input, textarea {
+      float: right;
+      margin: 10px;
+      width: 180px;
+    }
+    label {
+      margin-right: 10px;
+    }
+    li{
+      width: 100%;
+      display: block;
+      position: relative;
+      list-style: none;
+      clear: both;
+    }
+  }
+}
