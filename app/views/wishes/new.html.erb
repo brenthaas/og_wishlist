@@ -1,10 +1,16 @@
-<h2>Add a wish</h2>
+<div id="new-wish">
+  <h2>Add a wish</h2>
 
-<%= form_for @wish do |wish| %>
-  <p><%= wish.label :title %><%= wish.text_field :title %></p>
-  <p><%= wish.label :summary %><%= wish.text_area :summary %></p>
-  <p><%= wish.label :url %><%= wish.text_field :url %></p>
-  <p><%= wish.label :image %><%= wish.text_field :image %></p>
-  <p><%= hidden_field :user, :id, {value: current_user.id} %>
-  <p><%= wish.submit "Add wish" %></p>
-<% end %>
+  <%= form_for @wish do |wish| %>
+    <fieldset>
+      <ul>
+        <li><%= wish.label :title %><%= wish.text_field :title %></li>
+        <li><%= wish.label :summary %><%= wish.text_area :summary %></li>
+        <li><%= wish.label :url %><%= wish.text_field :url %></li>
+        <li><%= wish.label :image %><%= wish.text_field :image %></li>
+        <li><%= hidden_field :user, :id, {value: current_user.id} %></li>
+        <li><%= wish.submit "Add wish" %></li>
+      </ul>
+    </fieldset>
+  <% end %>
+</div>
