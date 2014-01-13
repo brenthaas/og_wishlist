@@ -14,6 +14,10 @@ describe WishesController do
       it "creates a new wish" do
         expect { post :create, @valid_params }.to change{Wish.count}.by 1
       end
+      it "associates the wish with the current user" do
+        post :create, @valid_params
+        Wish.last.user_id.should == @user.id
+      end
       context "when an error occurs" do
         before (:each) do
           Wish.any_instance.stub(:valid?).and_return false

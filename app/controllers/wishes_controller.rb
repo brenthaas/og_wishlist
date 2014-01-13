@@ -2,7 +2,7 @@ class WishesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    wish = Wish.new(validated_params)
+    wish = current_user.wishes.build(validated_params)
     if wish.save
       render nothing: true
     else
