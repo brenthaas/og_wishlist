@@ -18,6 +18,10 @@ describe WishesController do
         post :create, @valid_params
         Wish.last.user_id.should == @user.id
       end
+      it "redirects to the index page" do
+        post :create, @valid_params
+        response.should redirect_to :wishes
+      end
       context "when an error occurs" do
         before (:each) do
           Wish.any_instance.stub(:valid?).and_return false

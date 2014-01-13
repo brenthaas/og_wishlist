@@ -4,8 +4,9 @@ class WishesController < ApplicationController
   def create
     wish = current_user.wishes.build(validated_params)
     if wish.save
-      render nothing: true
+      redirect_to :wishes
     else
+      #TODO: Add a flash error notice
       render :new
     end
   end
