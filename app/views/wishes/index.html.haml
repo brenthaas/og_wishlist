@@ -6,3 +6,5 @@
 
   %h3 Other People's Wishes:
   = render partial: 'wish_list', locals: {wishes: @other_wishes}
+
+  = link_to "Create a new wish!", :new_wish
