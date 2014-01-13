@@ -57,9 +57,17 @@ describe WishesController do
     end
 
     describe "index" do
-      it "gets everything" do
+      before(:each) do
+        @user_wishes = FactoryGirl.create_list(:wish, 3, user: @user)
+        @other_wishes = FactoryGirl.create_list(:wish, 3)
+      end
+      it "gets the current users's wishes" do
         get :index
-        assigns(:wishes).should == Wish.all
+        assigns(:users_wishes).should == @user.wishes
+      end
+      it "gets other users wishes" do
+        get :index
+        assigns(:other_wishes).should_not include @user.wishes
       end
     end
   end

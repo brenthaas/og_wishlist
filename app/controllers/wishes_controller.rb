@@ -20,7 +20,8 @@ class WishesController < ApplicationController
   end
 
   def index
-    @wishes = Wish.all
+    @users_wishes = current_user.wishes
+    @other_wishes = Wish.where("user_id != #{current_user.id}")
     render :index
   end
 

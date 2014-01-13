@@ -1,4 +1,8 @@
 .wishes-list
   %h2 Wishes List
 
-  = render partial: 'wish_list', locals: {wishes: @wishes}
+  %h3 My Wishes:
+  = render partial: 'wish_list', locals: {wishes: @users_wishes}
+
+  %h3 Other People's Wishes:
+  = render partial: 'wish_list', locals: {wishes: @other_wishes}
