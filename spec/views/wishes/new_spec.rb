@@ -5,7 +5,7 @@ describe "/wishes/new.html.erb" do
     before (:each) do
       assign(:wish, stub_model(Wish) )
       @user = stub_model(User)
-      view.stub(:current_user).and_return @user
+      allow(view).to receive(:current_user).and_return(@user)
     end
     it "makes a hidden field with the user id" do
       render
