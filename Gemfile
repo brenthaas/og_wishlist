@@ -36,8 +36,9 @@ end
 
 group :test do
   gem 'rspec-rails', '~> 3.0.0'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', require: false
   gem 'rspec-activemodel-mocks'
+  gem 'spring-commands-rspec'
 end
 
 # Use ActiveModel has_secure_password
