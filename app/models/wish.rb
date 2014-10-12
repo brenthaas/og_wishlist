@@ -13,6 +13,8 @@
 #
 
 class Wish < ActiveRecord::Base
+  acts_as_commentable
+
   validates_presence_of :title
 
   belongs_to :user
