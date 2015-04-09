@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2.1'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 # Use SCSS for stylesheets
@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'devise'
+gem 'devise', '~> 3.4.1'
 gem 'acts_as_commentable_with_threading'
 
 group :development do
@@ -34,12 +34,12 @@ group :development do
 end
 
 group :development, :test do
-  gem 'factory_girl_rails', '~> 4.0'
+  gem 'factory_girl_rails', '~> 4.5'
   gem 'pry-byebug'
 end
 
 group :test do
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails', '~> 3.2.1'
   gem 'shoulda-matchers', require: false
   gem 'rspec-activemodel-mocks'
   gem 'spring-commands-rspec'

@@ -9,7 +9,7 @@ describe "/wishes/new.html.erb" do
     end
     it "makes a hidden field with the user id" do
       render
-      expect(rendered).to match /<input id="user_id".*type="hidden" value="\d+"/
+      expect(rendered).to match /input .*value="\d+" .*type="hidden" .*id="user_id"/
     end
   end
 end

@@ -1,5 +1,4 @@
 %ul.wish-list
   - wishes.each do |wish|
     %li
-      = "#{wish.title} - #{wish.summary} - url: #{wish.url} - image: "
-      = image_tag wish.image, width: 100
+      = render partial: wish

@@ -9,7 +9,7 @@ FactoryGirl.define do
     password "password"
     password_confirmation "password"
     factory :user_with_wishes do
-      ignore do
+      transient do
         wish_count 2
       end
       after(:create) do |user, evaluator|
