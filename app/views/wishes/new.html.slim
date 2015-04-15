@@ -1,0 +1,22 @@
+#new-wish
+  h2 Add a wish
+
+  = form_for @wish do |wish|
+    fieldset
+      ul
+        li
+          = wish.label :title
+          = wish.text_field :title
+        li
+          = wish.label :summary
+          = wish.text_area :summary
+        li
+          = wish.label :url
+          = wish.text_field :url
+        li
+          = wish.label :image
+          = wish.text_field :image
+        li
+          = hidden_field :user, :id, {value: current_user.id}
+        li
+          = wish.submit "Add wish"

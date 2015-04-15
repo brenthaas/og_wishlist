@@ -1,10 +1,10 @@
 .wishes-list
-  %h2 Wishes List
+  h2 Wishes List
 
-  %h3 My Wishes:
+  h3 My Wishes:
   = render partial: 'wish_list', locals: {wishes: @users_wishes}
 
-  %h3 Other People's Wishes:
+  h3 Other People's Wishes:
   = render partial: 'wish_list', locals: {wishes: @other_wishes}
 
   = link_to "Create a new wish!", :new_wish

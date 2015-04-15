@@ -1,0 +1,22 @@
+.show-wish
+  h2
+    = @wish.title
+
+  .wish
+    .title
+      span.label Title:
+      span.value
+        = @wish.title
+    .summary
+      span.label Summary:
+      span.value
+        = @wish.summary
+    -if @wish.url
+      .url
+        span.label Url:
+        a { href: @wish.url }
+          = @wish.url
+    -if @wish.image
+      .image
+        span.label Image:
+        img { src: @wish.image }
